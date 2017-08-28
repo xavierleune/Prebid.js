@@ -304,6 +304,7 @@ function AppnexusAstAdapter() {
 
     if (ad && status === STATUS.GOOD) {
       bid.cpm = ad.cpm;
+      bid.buyerMemberId = ad.buyer_member_id;
       bid.creative_id = ad.creative_id;
       bid.dealId = ad.deal_id;
 
@@ -319,7 +320,8 @@ function AppnexusAstAdapter() {
           bid.renderer = Renderer.install({
             id: ad.renderer_id,
             url: ad.renderer_url,
-            config: { adText: `AppNexus Outstream Video Ad via Prebid.js` },
+            // config: { adText: `AppNexus Outstream Video Ad via Prebid.js` },
+            config: ad.renderer_config,
             loaded: false,
           });
           try {
