@@ -320,7 +320,7 @@ function AppnexusAstAdapter() {
           bid.renderer = Renderer.install({
             id: ad.renderer_id,
             url: ad.renderer_url,
-            //config: { adText: `AppNexus Outstream Video Ad via Prebid.js` },
+            // config: { adText: `AppNexus Outstream Video Ad via Prebid.js` },
             config: ad.renderer_config,
             loaded: false,
           });
