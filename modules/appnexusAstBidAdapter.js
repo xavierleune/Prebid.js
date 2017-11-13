@@ -125,7 +125,7 @@ function newRenderer(adUnitCode, rtbBid) {
   const renderer = Renderer.install({
     id: rtbBid.renderer_id,
     url: rtbBid.renderer_url,
-    config: { adText: `AppNexus Outstream Video Ad via Prebid.js` },
+    config: rtbBid.renderer_config,
     loaded: false,
   });
 
